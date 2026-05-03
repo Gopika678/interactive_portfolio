@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio - Gopika</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">Welcome to My Portfolio</h1>
+            <p class="hero-subtitle">Full-stack developer | Web designer | Problem solver</p>
+            <button class="btn btn-primary" id="scrollBtn">Explore My Work</button>
+        </div>
+    </section>
+
+    <!-- About Section with Collapsible Content -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I'm a passionate web developer with expertise in creating interactive and user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I love bringing creative ideas to life on the web.</p>
+                
+                <button class="btn-toggle" id="skillsToggle">📚 Show Skills</button>
+                <div id="skillsContent" class="collapsible-content" style="display: none;">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <h3>Frontend</h3>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                            </ul>
+                        </div>
+                        <div class="skill-item">
+                            <h3>Tools & Platforms</h3>
+                            <ul>
+                                <li>Git & GitHub</li>
+                                <li>VS Code</li>
+                                <li>Chrome DevTools</li>
+                                <li>Figma</li>
+                            </ul>
+                        </div>
+                        <div class="skill-item">
+                            <h3>Soft Skills</h3>
+                            <ul>
+                                <li>Problem Solving</li>
+                                <li>Communication</li>
+                                <li>Team Work</li>
+                                <li>Time Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive To-Do List -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <p class="section-subtitle">Check out my recent work</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">E-Commerce Platform</div>
+                    <p>A fully responsive e-commerce website built with HTML, CSS, and JavaScript. Features include product filtering, shopping cart, and checkout process.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">Weather Dashboard</div>
+                    <p>Interactive weather application that fetches real-time data and displays forecasts with beautiful visualizations and animations.</p>
+                    <div class="project-tags">
+                        <span class="tag">API</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Charts</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">Task Management App</div>
+                    <p>A comprehensive task management system with categories, priorities, and local storage. Users can create, edit, delete, and organize their tasks efficiently.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">LocalStorage</span>
+                        <span class="tag">DOM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- To-Do List Interactive Feature -->
+            <div class="todo-section">
+                <h3>Quick Task Manager</h3>
+                <div class="todo-input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        placeholder="Add a new task..." 
+                        class="todo-input"
+                    >
+                    <button class="btn btn-secondary" id="addTodoBtn">Add Task</button>
+                </div>
+                <ul id="todoList" class="todo-list"></ul>
+                <button class="btn btn-small" id="clearTodoBtn" style="display: none;">Clear Completed</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery / Slider -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <p class="section-subtitle">Visual showcase of my work</p>
+            
+            <div class="gallery-container">
+                <div class="gallery-viewer">
+                    <img id="galleryImage" src="https://i.pinimg.com/736x/cd/8c/31/cd8c31d348315ff75cf243467dd57260.jpg" alt="Gallery image" class="gallery-main-image">
+                    <div class="gallery-controls">
+                        <button class="btn-nav" id="prevBtn">❮ Previous</button>
+                        <span id="imageCounter" class="image-counter">1 / 6</span>
+                        <button class="btn-nav" id="nextBtn">Next ❯</button>
+                    </div>
+                </div>
+                
+                <div class="gallery-thumbnails">
+                    <img src="https://i.pinimg.com/736x/cd/8c/31/cd8c31d348315ff75cf243467dd57260.jpg" alt="Thumbnail 1" class="thumbnail active" data-index="0">
+                    <img src="https://preview.redd.it/if-you-want-a-portfolio-design-hit-me-up-i-started-doing-v0-ng5pvpc6yofb1.jpg?width=640&crop=smart&auto=webp&s=a00bf797541904ebda62bc0be137050413c08538" class="thumbnail" data-index="1">
+                    <img src="https://images.examples.com/wp-content/uploads/2017/11/04.jpg" alt="Thumbnail 3" class="thumbnail" data-index="2">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.eK8s2nzNM7QyEtRUVowRjwHaEK?pid=Api&P=0&h=180" alt="Thumbnail 4" class="thumbnail" data-index="3">
+                    <img src="https://images.examples.com/wp-content/uploads/2017/11/Editable-Graphic-Design-Portfolio.jpg" class="thumbnail" data-index="4">
+                    <img src="https://i.ytimg.com/vi/ewSCtqMNCbo/maxresdefault.jpg" alt="Thumbnail 6" class="thumbnail" data-index="5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form with Validation -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">I'd love to hear from you</p>
+            
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required
+                        placeholder="Enter your full name"
+                    >
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        placeholder="Enter your email"
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone"
+                        placeholder="Enter your phone number (optional)"
+                    >
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        required
+                        placeholder="What is this about?"
+                    >
+                    <span class="error-message" id="subjectError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5" 
+                        required
+                        placeholder="Write your message here (minimum 10 characters)"
+                    ></textarea>
+                    <span class="error-message" id="messageError"></span>
+                    <span class="char-count" id="charCount">0 / 500</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Interactive Portfolio. All rights reserved.</p>
+            <p>Built with HTML, CSS, and JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
